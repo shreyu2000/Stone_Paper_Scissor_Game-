@@ -1,0 +1,383 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+/* #8CC461; */
+body{
+    background-color:  #8CC461;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Ubuntu', sans-serif; */
+}
+/* header section scores  */
+.container{
+    position: relative;
+    max-width: 800px;
+    margin: 2px auto;
+    padding-top: 2rem;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    padding: 1rem  1.4rem 1rem 2rem;
+
+}
+.score-card{
+    display: flex;
+    justify-content: space-evenly;
+    width: 400px;
+    height: 100%;
+
+}
+.logo{
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    
+}
+.score{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    width: 150px;
+    height: 100%;
+}
+.score_title{
+    font-size:1rem;
+    letter-spacing: 0.1em;
+    color: #656565;
+    text-align: center;
+}
+.score_number{
+    font-size: 4rem;
+    font-weight: 600;
+    color: #252525;
+}
+/* header complete */
+
+/* Game Section */
+
+.game{
+    background-image: url("./assets/bg-triangle.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    visibility: visible;
+    opacity: 1;
+    z-index: 0;
+    position: relative;
+   width: 490px;
+   height: 410px;
+   margin: 2rem auto;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   align-items: center;
+}
+
+.choice-btn{
+    border: none;
+    outline: none;
+    background:none;
+    cursor: pointer;
+}
+
+
+/* Rules Button */
+
+.rules-btn{
+    position:relative;
+    /* display: inline-block; */
+    /* margin-top:1rem; */
+    margin-right:2rem;
+    float: right;
+    bottom: 1rem;
+    /* right:1rem; */
+    background: transparent;
+    outline: none;
+    border: 2px solid  #fff;
+    border-radius: 10px;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 0.6rem 2.5rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    font-family: inherit;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    
+}
+#next-btn{
+    display: none;
+}
+
+
+/* Results */
+
+.contest{
+    width:800px;
+    height: 410px;
+    margin: 2rem auto;
+    display: none;
+    justify-content: space-around;
+    /* align-items: center; */
+    /* border: 2px solid; */
+    color: #fff;
+}
+
+
+
+.handImageContainer{
+    /* border: 2px solid; rgba(58, 159, 68, 0.9) */
+    background: transparent ; 
+    width:210px;
+    height:210px;
+    border-radius: 50%;
+    overflow: hidden;
+    /* animation: shadow-animation 2s infinite forwards; */
+   
+}
+
+
+.contest img{
+    width:210px;
+    height:210px;
+    
+}
+
+
+
+.contest >div{
+    flex:1;
+}
+.userhand p,.computerhand p{
+    font-size: 1.4rem;
+    z-index: 1;
+}
+
+.userhand ,.computerhand{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.referee{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.newGame{
+    background-color: #fff;
+    color: #252525;
+    margin: 2rem;
+    padding: 12px 26px;
+    border-radius: 9px;
+    cursor: pointer;
+    transition: all 0.15s;
+    letter-spacing: 2px;
+    font-size: 1.3rem;
+}
+
+.newGame:hover{
+    background-color: #ece8e8;
+    transform: translate(0px, -4px ,0px);
+}
+
+/*  */
+
+/* .userhand img{
+    /* box-shadow: 0 0 0 30px #3B6720, 0 0 0 50px #1DA82B, 0 0 0 90px #2E9A25;
+    animation: winner 1s ease forwards; */
+    /* border: 2px solid black; */
+/* } */
+
+
+
+.rules-btn:focus{
+    border: 3px solid #fff;
+    
+}
+
+.winner{
+    width: 700px;
+    height: 600px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 1rem auto;
+    /* border: 2px solid; */
+    text-align: center;
+    color: #fff;
+}
+
+.stars{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid black; */
+    width: 600px;
+    height: 500px;
+    /* animation: twinkling 1s ease-in-out forwards infinite; */
+
+}
+
+.twinkling-star {
+    /* position: relative; */
+    animation: twinkling 2s ease-in-out forwards infinite; 
+   border: 1px solid;
+}
+
+
+  .star-image {
+    position: absolute;
+    left :10px;
+  }
+
+  .star1{
+    top: 10px;
+    left: 400px;
+  }
+
+  .start2{
+    top:10px;
+    left:50px    /* float:right; */
+  }
+  .star3{
+    top:40px;
+    left: 300px;
+  }
+
+  .star4{
+    bottom: 350px;
+    left:100px;
+  }
+
+
+  .star5{
+    left:400px;
+    top:150px;
+  }
+
+  .star6{
+    top:50%;
+   left: 450px;
+
+  }
+  .star7{
+    top:30%;
+    left:170px;
+  }
+  .star8{
+    top:300px;
+    left:40px;
+  }
+
+
+
+  @keyframes twinkling {
+    0% {
+      opacity: 1; /* Star is fully visible at the start */
+      filter: brightness(0.5) scale(0.8);
+    }
+    50% {
+      opacity: 0;
+      filter: brightness(1) scale(1.2); /* Star is completely invisible halfway through the animation */
+    }
+    100% {
+      opacity: 1; /* Star is fully visible at the end */
+      filter: brightness(0.8) scale(0.8);
+    }
+  }
+
+
+.trophy{
+    position: absolute;
+    top: 6rem;
+
+}
+
+.hurray{
+    font-size: 1.8rem;
+}
+
+
+
+
+
+/* Game rules window */
+
+.game-rules{
+    display: none;
+    position:fixed;
+    width: 350px;
+    height: 400px;
+    right: 1rem;
+    float: right;
+    top:60%;
+    transform: translate(-20%, -50%);
+    z-index: 2;
+
+}
+.game-rules img{
+    width: 100%;
+    height: 100%;
+    margin: 5px 0;
+}
+
+
+
+
+
+
+/* .rules-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 320px;
+    height: 360px;
+    font-size: 13px;
+    padding: 10px;
+    margin: 15px;
+    letter-spacing: 1px;
+}
+
+.rules-list ul{
+    height: 290px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    list-style-type: square;
+    /* color: yellow; */
+
+/* .rules-list ul */
+
+.close-button {
+    position: absolute;
+    top: 0px;
+    right: 1px;
+    background: red;
+    border: 2px solid white;
+    border-radius: 50%; 
+    font-size: 35px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    color: white;
+    text-align: center;
+}
+  
