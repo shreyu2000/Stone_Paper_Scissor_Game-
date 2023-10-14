@@ -122,6 +122,14 @@ const pcscore = (pcnewScore) => {
   document.getElementById("pcscore").innerHTML = pcSCORE;
 };
 
+//local storage
+
+// Function to retrieve the player scores from local storage
+
+
+
+
+
 // Celebrate page
 let celebrate = (nextButton) => {
   hurray();

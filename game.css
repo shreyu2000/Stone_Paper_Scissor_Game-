@@ -135,7 +135,6 @@ body{
 }
 
 
-
 .handImageContainer{
     /* border: 2px solid; rgba(58, 159, 68, 0.9) */
     background: transparent ; 
@@ -153,8 +152,6 @@ body{
     height:210px;
     
 }
-
-
 
 .contest >div{
     flex:1;
@@ -195,14 +192,6 @@ body{
     transform: translate(0px, -4px ,0px);
 }
 
-/*  */
-
-/* .userhand img{
-    /* box-shadow: 0 0 0 30px #3B6720, 0 0 0 50px #1DA82B, 0 0 0 90px #2E9A25;
-    animation: winner 1s ease forwards; */
-    /* border: 2px solid black; */
-/* } */
-
 
 
 .rules-btn:focus{
@@ -237,7 +226,7 @@ body{
 
 .twinkling-star {
     /* position: relative; */
-    animation: twinkling 2s ease-in-out forwards infinite; 
+    animation: twinkling 1s ease-in forwards infinite; 
    border: 1px solid;
 }
 
@@ -337,34 +326,6 @@ body{
     height: 100%;
     margin: 5px 0;
 }
-
-
-
-
-
-
-/* .rules-list{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 320px;
-    height: 360px;
-    font-size: 13px;
-    padding: 10px;
-    margin: 15px;
-    letter-spacing: 1px;
-}
-
-.rules-list ul{
-    height: 290px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    list-style-type: square;
-    /* color: yellow; */
-
-/* .rules-list ul */
 
 .close-button {
     position: absolute;
