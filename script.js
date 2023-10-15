@@ -6,8 +6,16 @@ const handOptions = {
   paper: "./assets/paper1.png",
 };
 
-let mySCORE = 0;
-let pcSCORE = 0;
+let mySCORE;
+let pcSCORE;
+
+// Initialize the scores from local storage or set them to 0
+mySCORE = parseInt(localStorage.getItem("userScore")) || 0;
+pcSCORE = parseInt(localStorage.getItem("pcScore")) || 0;
+
+// Update the score elements on the page
+document.getElementById("myscore").innerHTML = mySCORE;
+document.getElementById("pcscore").innerHTML = pcSCORE;
 
 let nextButton = document.querySelector("#next-btn");
 //your choice
@@ -101,34 +109,28 @@ const setDecision = (decision) => {
     ).innerHTML = `<h1>${decision}</h1> &nbsp <h2>Against PC</h2>`;
   }
 
-  if(decision == "YOU WIN"){
+  if (decision == "YOU WIN") {
     nextButton.style.display = "inline";
-  }
-  else{
+  } else {
     nextButton.style.display = "none";
   }
-
-
 };
 
 // score
 const myscore = (mynewScore) => {
   mySCORE = mynewScore;
   document.getElementById("myscore").innerHTML = mySCORE;
+
+  // Save the user's score in local storage
+  localStorage.setItem("userScore", mySCORE);
 };
 
 const pcscore = (pcnewScore) => {
   pcSCORE = pcnewScore;
   document.getElementById("pcscore").innerHTML = pcSCORE;
+
+  localStorage.setItem("pcScore", pcSCORE);
 };
-
-//local storage
-
-// Function to retrieve the player scores from local storage
-
-
-
-
 
 // Celebrate page
 let celebrate = (nextButton) => {
@@ -148,19 +150,16 @@ function hurray() {
   nextButton.style.display = "none";
 }
 
-
 // Rules
 
-const openButton = document.querySelector('#openButton');
-const popup = document.querySelector('.game-rules');
-const closeButton = document.getElementById('closeButton');
+const openButton = document.querySelector("#openButton");
+const popup = document.querySelector(".game-rules");
+const closeButton = document.getElementById("closeButton");
 
-openButton.addEventListener('click', () => {
-  popup.style.display = 'block';
+openButton.addEventListener("click", () => {
+  popup.style.display = "block";
 });
 
-closeButton.addEventListener('click', () => {
-  popup.style.display = 'none';
+closeButton.addEventListener("click", () => {
+  popup.style.display = "none";
 });
-
-
