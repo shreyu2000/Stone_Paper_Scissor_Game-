@@ -9,8 +9,6 @@ const handOptions = {
 let mySCORE;
 let pcSCORE;
 
-
-
 // Initialize the scores from local storage or set them to 0
 mySCORE = parseInt(localStorage.getItem("userScore")) || 0;
 pcSCORE = parseInt(localStorage.getItem("pcScore")) || 0;
@@ -113,8 +111,7 @@ const setDecision = (decision) => {
 
   if (decision === "YOU WIN") {
     nextButton.style.display = "inline";
-
-  } else if(decision === "YOU  LOST"){
+  } else if (decision === "YOU  LOST") {
     nextButton.style.display = "none";
   }
 
@@ -170,7 +167,3 @@ openButton.addEventListener("click", () => {
 closeButton.addEventListener("click", () => {
   popup.style.display = "none";
 });
-
-
-
-
