@@ -9,6 +9,8 @@ const handOptions = {
 let mySCORE;
 let pcSCORE;
 
+
+
 // Initialize the scores from local storage or set them to 0
 mySCORE = parseInt(localStorage.getItem("userScore")) || 0;
 pcSCORE = parseInt(localStorage.getItem("pcScore")) || 0;
@@ -48,8 +50,8 @@ const referee = (userchoice, pcchoice) => {
     (userchoice == "rock" && pcchoice == "scissor")
   ) {
     setDecision("YOU WIN");
+
     myscore(mySCORE + 1);
-    // nextButton.style.display = "inline";
   }
 
   if (
@@ -109,11 +111,16 @@ const setDecision = (decision) => {
     ).innerHTML = `<h1>${decision}</h1> &nbsp <h2>Against PC</h2>`;
   }
 
-  if (decision == "YOU WIN") {
+  if (decision === "YOU WIN") {
     nextButton.style.display = "inline";
-  } else {
+
+  } else if(decision === "YOU  LOST"){
     nextButton.style.display = "none";
   }
+
+  // else{
+  //   nextButton.style.display = "none";
+  // }
 };
 
 // score
@@ -163,3 +170,7 @@ openButton.addEventListener("click", () => {
 closeButton.addEventListener("click", () => {
   popup.style.display = "none";
 });
+
+
+
+

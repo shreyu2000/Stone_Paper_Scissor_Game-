@@ -135,22 +135,35 @@ body{
 }
 
 
+/* @keyframes shadow-animation {
+    0% { 
+   box-shadow: 0 0 0 30px rgba(58, 159, 68, 0.9);
+   }
+   50% {
+       box-shadow: 0 0 0 70px rgba(29, 168, 43, 0.79);
+    } 
+   100% {
+       box-shadow: 0 0 0 100px rgba(71, 181,61, 0.39);
+   }
+
+
+} */
+
 .handImageContainer{
     /* border: 2px solid; rgba(58, 159, 68, 0.9) */
     background: transparent ; 
     width:210px;
     height:210px;
     border-radius: 50%;
-    overflow: hidden;
-    /* animation: shadow-animation 2s infinite forwards; */
-   
+    overflow: hidden;   
 }
-
 
 .contest img{
     width:210px;
     height:210px;
-    
+    /* box-shadow: 0 0 0 30px rgba(78, 134, 43, 0.9),0 0 0 50px rgba(29, 168, 43, 0.79),box-shadow: 0 0 0 70px rgba(71, 181,61, 0.39);  */
+    /* background: radial-gradient(circle, rgba(59, 103, 32, 1), rgba(29, 168, 43, 0.79) , rgba(46, 154, 37, 0.39)); */
+
 }
 
 .contest >div{
